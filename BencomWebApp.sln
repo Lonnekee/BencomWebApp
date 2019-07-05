@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BencomWebApp", "BencomWebApp.csproj", "{8FA5098E-B127-4134-9197-DE9DB55FDC05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FA5098E-B127-4134-9197-DE9DB55FDC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA5098E-B127-4134-9197-DE9DB55FDC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA5098E-B127-4134-9197-DE9DB55FDC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA5098E-B127-4134-9197-DE9DB55FDC05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE2B007-B073-46B5-8692-87C695A4FE10}
+	EndGlobalSection
+EndGlobal
