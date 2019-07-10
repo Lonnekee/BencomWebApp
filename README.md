@@ -19,7 +19,7 @@
 	- ShowFeed(model): requests the tweets of the given user name and gives that model to the view ShowFeed.
 
 ## Util
-- StaticCache: contains the stored bearer token, which allows access to the API. The bearer token is 
+- Constants: contains a.o. the stored bearer token, which allows access to the API. The bearer token is 
   stored in Startup.cs.
 - TwitterUserNameAttribute: the attribute is used to check if the input of the field UserName
   on the Twitter page adheres to certain restrictions. Applied in the Model.Feed class.
