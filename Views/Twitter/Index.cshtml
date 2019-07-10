@@ -1,8 +1,17 @@
-﻿@{
+﻿@model BencomWebApp.Models.Feed
+@{
     ViewData["Title"] = "Twitter Feed";
 }
 
     <div class="text-center">
-        <p>@ViewData["Message"]</p>
+        <p>Please give a Twitter username (without the preceding &#64;):</p>
+        <form asp-action="Index" asp-controller="Feed" method="POST">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="UserName" placeholder="user_name" />
+                <span asp-validation-for="UserName"></span>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 

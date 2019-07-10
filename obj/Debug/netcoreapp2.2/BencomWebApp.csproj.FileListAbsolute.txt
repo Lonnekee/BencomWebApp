@@ -28,3 +28,4 @@ C:\Users\lonne\Documents\Programmeren in ASP.NET\BencomWebApp\obj\Debug\netcorea
 C:\Users\lonne\Documents\Programmeren in ASP.NET\BencomWebApp\obj\Debug\netcoreapp2.2\BencomWebApp.pdb
 C:\Users\lonne\Documents\Programmeren in ASP.NET\BencomWebApp\obj\Debug\netcoreapp2.2\BencomWebApp.csproj.CopyComplete
 C:\Users\lonne\Documents\Programmeren in ASP.NET\BencomWebApp\obj\Debug\netcoreapp2.2\Razor\Views\Twitter\Index.g.cshtml.cs
+C:\Users\lonne\Documents\Programmeren in ASP.NET\BencomWebApp\obj\Debug\netcoreapp2.2\Razor\Views\Twitter\ShowFeed.g.cshtml.cs

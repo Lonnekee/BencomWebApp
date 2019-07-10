@@ -1,0 +1,32 @@
+﻿@model BencomWebApp.Models.Feed
+
+@{
+    ViewData["Title"] = "ShowFeed";
+}
+
+<!--This block shows all tweets send by the requested user in the past week,
+up to a maximum of 15 tweets.-->
+<div class="text-center">
+    <!--<p>@ViewData["Original"]</p>-->
+
+    @foreach (var item in @Model.AllTweets)
+    {
+        <blockquote class="twitter-tweet" data-lang="en">
+            <p>
+                &mdash; <b>@item.Name</b> (&#64;@item.UserName) on @item.Date.DayOfWeek @item.Date.Day-@item.Date.Month-@item.Date.Year @item.Date.TimeOfDay:
+            </p>
+            <p>@item.Text</p>
+            @{
+                if (item.MediaUrlImage != null)
+                {
+                    <img src="@item.MediaUrlImage" alt="This Tweet's image." width="300px" />
+                }
+            }
+        </blockquote>
+    }
+</div>
+
+<div class="text-center">
+    <a asp-action="Index">Show the feed of another user.</a>
+</div>
+
