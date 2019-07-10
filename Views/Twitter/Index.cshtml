@@ -3,15 +3,21 @@
     ViewData["Title"] = "Twitter Feed";
 }
 
-    <div class="text-center">
-        <p>Please give a Twitter username (without the preceding &#64;):</p>
-        <form asp-action="Index" asp-controller="Feed" method="POST">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input asp-for="UserName" placeholder="user_name" />
-                <span asp-validation-for="UserName"></span>
-                <button type="submit">Submit</button>
+<div class="text-center">
+    <p>Please insert a username, without a preceding &#64;.</p>
+    <form asp-action="Index" asp-controller="Feed" method="POST">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="w-25">
+                </div>
+                <input asp-for="UserName" class="form-control w-50" placeholder="username" /></br>
+                <div class="w-25">
+                </div>
             </div>
-        </form>
-    </div>
+            <span asp-validation-for="UserName"></span></br>
+            <button class="btn btn-outline-secondary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 

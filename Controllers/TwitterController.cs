@@ -39,10 +39,11 @@ namespace BencomWebApp.Controllers
             return View(viewModel);
         }
 
-        /* 
-         * RequestTweets contains an asynchronous process that blocks the program until
+        /* RequestTweets contains an asynchronous process that blocks the program until
          * a response from the Twitter API is received and one that converts the response to
          * a string.
+         * A Feed with no Tweets is returned when the response did not go correctly or when the
+         * specific user hasn't tweeted in the last week.
          */
         private Feed RequestTweets(Feed model)
         {

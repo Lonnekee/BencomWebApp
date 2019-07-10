@@ -13,9 +13,8 @@ namespace BencomWebApp.Models
         public List<Tweet> AllTweets { get; private set; }
 
         [Required]
-        [TwitterUserName] // Custom-made attribute. It can be found in folder "util".
+        [TwitterUserName] // Custom-made attribute. It can be found in the folder "Util".
         public string UserName { get; set; }
-        public string BearerToken { get; set; }
 
         // Constructors
         public Feed()
@@ -39,19 +38,17 @@ namespace BencomWebApp.Models
                     mediaUrlImage = (string)item.SelectToken("entities.media[0].media_url");
                 }
 
-                // Convert the string with the date to a DateTime object
-                ds = ds.Insert(23, ":"); // The timezone needs to have the following format: +00:00
+                /* DateTime is parsed from string in the following format:
+                 * "ddd MMM dd HH:mm:ss zzz yyyy" = 
+                 * "'day of the week' 'month in letters' 'day of the month with two numbers' 'up to 24 two-digit hour' 
+                 * 'two-digit minutes' 'two-digit seconds' 'timezone' 'four-digit year'".
+                 */
+                ds = ds.Insert(23, ":"); // The timezone needs to have the following format: +00:00.
                 CultureInfo provider = new CultureInfo("en-US"); // Without culture info, names of months and weekdays won't be recognized.
-                DateTime date = DateTime.ParseExact(ds, "ddd MMM dd HH:mm:ss zzz yyyy", provider);
+                DateTime date = DateTime.ParseExact(ds, "ddd MMM dd HH:mm:ss zzz yyyy", provider); 
 
                 AllTweets.Add(new Tweet(name, userName, text, date, mediaUrlImage));
             }
         }
-
-        public void AddTweet(Tweet t)
-        {
-            AllTweets.Add(t);
-        }
-
     }
 }

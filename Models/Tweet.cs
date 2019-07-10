@@ -34,6 +34,10 @@ namespace BencomWebApp.Models
             }
         }
 
+        /* Each picture that is inluded in a Tweet is also included as a link that starts with
+         * 'https://t.co/' in the Text. We want to get this link out of the text and instead
+         * show the image with the link in mediaUrlImage (which is a showable jpg-file).
+         */
         private void RemoveImageFromText()
         {
             string url = Constants.TwitterImageBaseUrl;
@@ -41,12 +45,12 @@ namespace BencomWebApp.Models
             if (Text.Contains(url))
             {
                 Regex r = new Regex(@"\s");
-                string[] blocks = r.Split(Text);
+                string[] blocks = r.Split(Text); // The text is splitted at the white-spaces.
                 foreach (var i in blocks)
                 {
-                    if (i.Contains(url))
+                    if (i.Contains(url)) // The first block that contains the url is removed from the text.
                     {
-                        Text = Text.Remove(Text.IndexOf(i), i.Length);
+                        Text = Text.Remove(Text.IndexOf(i), i.Length); // Note that this may result in two spaces after each other.
                         return;
                     }
                 }

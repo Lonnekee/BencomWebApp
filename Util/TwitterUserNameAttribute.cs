@@ -21,7 +21,7 @@ namespace BencomWebApp.Util
             }
             else
             {
-                return new ValidationResult($"{userName} is not a valid Twitter username");
+                return new ValidationResult($"{userName} is not a valid Twitter username. Usernames contain a maximum of 15 letters, numbers and underscores.");
             }
         }
     }
