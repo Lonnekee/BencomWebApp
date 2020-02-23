@@ -1,6 +1,6 @@
 title: Welcome to the BencomWebApp GitHub Page!
 description: Something
-theme: icarus
+theme: jekyll-theme-minimal
 
 menu:
     Archives: /archives
